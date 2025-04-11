@@ -4,24 +4,34 @@
     <title>Quote of the Day</title>
     <style>
         body {
-            font-family: sans-serif;
-            background-color: #f0f0f0;
-            padding: 50px;
+            font-family: Arial, sans-serif;
             text-align: center;
+            margin-top: 15%;
+            background-color: #f7f7f7;
+        }
+        .quote-box {
+            background-color: #fff;
+            padding: 30px;
+            margin: auto;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         .quote {
             font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
+            font-style: italic;
         }
         .author {
-            font-size: 18px;
-            color: #777;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="quote">"{{ quote }}"</div>
-    <div class="author">— {{ author }}</div>
+    <div class="quote-box">
+        <div class="quote">“{{ quote }}”</div>
+        <div class="author">— {{ author }}</div>
+    </div>
 </body>
 </html>

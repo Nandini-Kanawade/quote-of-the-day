@@ -6,10 +6,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     try:
-        response = requests.get("https://api.quotable.io/random")  # No verify=False here
-        data = response.json()
-        quote = data["content"]
-        author = data["author"]
+        response = requests.get("https://zenquotes.io/api/random")
+        data = response.json()[0]
+        quote = data["q"]
+        author = data["a"]
     except Exception as e:
         quote = "Could not fetch quote."
         author = str(e)
